@@ -1,0 +1,45 @@
+<div class="title">Tic-Tac-Toe</div>
+
+<div
+  *ngIf="winner &&showPopup"
+  (click)="showPopup = !showPopup;newGame()"
+  class="popup-container">
+  <div class="popup">
+    <h2>
+      🥳
+    <span
+        [ngClass]="{'O': winner === 'O', 'X':winner==='X'}"
+        class="who">Winner Player {{winner}}</span>
+  </h2>
+  </div>
+</div>
+
+<div
+  *ngIf="winner &&showPopup"
+  class="bg">
+  Winner
+</div>
+<div class="player">
+
+  <h1> <span [ngClass]="{'O': player === 'O', 'X':player==='X'}">{{ player }} </span> Turn</h1>
+
+  <button
+    class="newGame"
+    (click)="newGame()">
+    <i class="fa-solid fa-rotate-right"></i>
+  </button>
+
+</div>
+
+<main>
+  <app-square
+    *ngFor="let val of squares; let i = index"
+    [value]="val"
+    (click)="makeMove(i)">
+  </app-square>
+</main>
+
+<div class="instructions">
+  <span class="x">Player X</span>
+  <span class="o">Player O</span>
+</div>

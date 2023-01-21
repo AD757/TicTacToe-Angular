@@ -1,0 +1,11 @@
+<button *ngIf="!value">{{ value }}</button>
+<button
+  *ngIf="value == 'X'"
+  class="buttonX">
+  {{ value }}
+</button>
+<button
+  *ngIf="value == 'O'"
+  class="buttonO">
+  {{ value }}
+</button>

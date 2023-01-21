@@ -1,0 +1,128 @@
+main {
+  display: grid;
+  grid-template-columns: 120px 120px 120px;
+  grid-row-gap: 20px;
+  grid-column-gap: 10px;
+  background: #D7CFF9;
+  justify-content: center;
+  padding: 30px;
+}
+
+app-square {
+  height: 120px;
+  border-radius: 10px;
+}
+
+.newGame {
+  height: 50px;
+  width: 50px;
+  font-size: 1.5em;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  background-color: #F3F3F3;
+  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+.newGame:hover{
+  cursor: pointer;
+}
+
+.player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+h1 {
+  font-size: 1.4em;
+  width: fit-content;
+  background: #F3F3F3;
+  padding: 20px 40px 20px 40px;
+  border-radius: 20px;
+  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+  color: #1e1e1e;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  gap: 10px;
+  font-size: 2em;
+  font-weight: bold;
+  color: #5746AF
+}
+.O {
+  color:#EE9D2B;
+}
+.X {
+  color: #5746AF;
+}
+
+.instructions {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  gap: 10px;
+}
+
+.winner {
+  display: flex;
+  justify-content: center;
+  font-size: 1.4em;
+  width: fit-content;
+  background: #F3F3F3;
+  padding: 20px 40px 20px 40px;
+  border-radius: 20px;
+  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 40;
+  height: 100vh;
+  width: 100vw;
+}
+
+.popup {
+  position: absolute;
+  background-color: #F3F3F3;
+  height: 300px;
+  width: 300px;
+  color: #aabfca;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+}
+
+.popup > h2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.bg {
+  position: absolute;
+  filter: blur(30px);
+  height: 100vh;
+  width: 100vw;
+  z-index: 30;
+  opacity: 0.9;
+  background-color: #D7CFF9;
+}
+
+@media (max-width: 300px) {
+  main{
+    grid-template-columns: 60px 60px 60px;
+  }
+  app-square {
+    height: 60px;
+  }
+
+}

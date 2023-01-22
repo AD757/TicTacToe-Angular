@@ -10,16 +10,16 @@ main {
 
 app-square {
   height: 120px;
-  border-radius: 10px;
+  border-radius: 24px;
 }
 
 .newGame {
   height: 50px;
-  width: 50px;
-  font-size: 1.5em;
-  font-weight: 700;
+  width: fit-content;
+  font-size: 1.2em;
   border: none;
-  border-radius: 10px;
+  padding: 12px;
+  border-radius: 24px;
   background-color: #F3F3F3;
   box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
 }
@@ -32,15 +32,6 @@ app-square {
   justify-content: center;
   align-items: center;
   gap: 20px;
-}
-h1 {
-  font-size: 1.4em;
-  width: fit-content;
-  background: #F3F3F3;
-  padding: 20px 40px 20px 40px;
-  border-radius: 20px;
-  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
-  color: #1e1e1e;
 }
 
 .title {
@@ -75,7 +66,7 @@ h1 {
   width: fit-content;
   background: #F3F3F3;
   padding: 20px 40px 20px 40px;
-  border-radius: 20px;
+  border-radius: 24px;
   box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.2);
 }
 
@@ -95,7 +86,7 @@ h1 {
   height: 300px;
   width: 300px;
   color: #aabfca;
-  border-radius: 20px;
+  border-radius: 24px;
   display: grid;
   place-items: center;
 }
@@ -117,12 +108,31 @@ h1 {
   background-color: #D7CFF9;
 }
 
-@media (max-width: 300px) {
+.playerTurn {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 550px) {
   main{
-    grid-template-columns: 60px 60px 60px;
+    grid-template-columns: 80px 80px 80px;
   }
   app-square {
-    height: 60px;
+    height: 80px;
   }
+
+  .title {
+    font-size: 1.4em;
+  }
+
+
+
+  .newGame {
+    font-size: 1em;
+  }
+ 
 
 }

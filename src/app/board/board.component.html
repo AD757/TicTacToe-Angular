@@ -20,15 +20,12 @@
   Winner
 </div>
 <div class="player">
-
-  <h1> <span [ngClass]="{'O': player === 'O', 'X':player==='X'}">{{ player }} </span> Turn</h1>
-
   <button
     class="newGame"
     (click)="newGame()">
     <i class="fa-solid fa-rotate-right"></i>
+    New game
   </button>
-
 </div>
 
 <main>
@@ -38,6 +35,10 @@
     (click)="makeMove(i)">
   </app-square>
 </main>
+
+<div class="playerTurn">
+  <span [ngClass]="{'O': player === 'O', 'X':player==='X'}">{{ player }} Turn </span>
+</div>
 
 <div class="instructions">
   <span class="x">Player X</span>
